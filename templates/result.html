@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		    <h2>Spam Detector For SMS Messages</h2>
+	    </div>
+    </header>
+    
+            <div class="fieldset">
+                <p><b>Results for Comment</b></p>
+                <div class="results">
+                    {% if prediction == 1%}
+                        <div>
+                                <h2 style="color:white">Spam</h2>
+                                <img src="https://media.giphy.com/media/l0IylR4JqKHLjaP60/giphy.gif"/>
+                        </div>
+                       
+                    {% elif prediction == 0%}
+                        <div>
+                                <h2 style="color:white">Not a Spam (It is a Ham)</h2>
+                                <img src="https://media.giphy.com/media/13YOUThVXTPeDu/giphy.gif"/>
+                        </div>
+                        
+                    {% endif %}
+                </div>
+            </div>
+
+    </div>
+	
+	
+
+</body>
